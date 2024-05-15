@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ</title>
+    <link rel="icon" href="images/—Pngtree—3d donut vector png_7261511.png" type="image/png">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo"><img src="images/—Pngtree—3d donut vector png_7261511.png" alt="" style="vertical-align: middle;">JJDONUTS</a>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="social-bar">
+    
+</div>
+    <div id="registration-form" class="floating-form">
+        <form class="registration-form">
+            <h2>Registration</h2>
+            <div class="registration-information">
+                <div class="info=item">
+                    <label  for="registration-username">Username:</label>
+                    <input type="text" id="registration-username">
+                </div>
+                <div class="info=item">
+                    <label for="registrartion-password">Password:</label>
+                    <input type="password" id="registrartion-password">
+                </div>
+                <div class="info=item">
+                    <label for="registrartion-fullname">Fullname:</label>
+                    <input type="password" id="registrartion-password">
+                </div>
+            </div>
+            <button type="button">Register</button>
+            <br>
+            <button type="button" onclick="toggleForm('login')">Switch to Login</button>
+        </form>
+    </div>
+    
+    <div id="login-form" style="display: none;" class="floating-form">
+        <form class="registration-form">
+            <!-- Login form fields -->
+            <h2>Login</h2>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password">
+            <button type="button">LogIn</button>
+            <br>
+            <button type="button" onclick="toggleForm('registration')">Switch to Registration</button>
+        </form>
+    </div>
+
+    <section id="home" class="registration-container">
+        <div class="image-container">
+        <img src="images/pngwing.com (1).png" alt="" style="width: 600px;">
+        </div>
+    </section>
+    <section id="about">
+        <h1>About Section</h1>
+        <p>Content for the about section...</p>
+    </section>
+    <script src="JScript/scipts.js"></script>
+    
+</body>
+</html>

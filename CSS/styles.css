@@ -1,0 +1,203 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 95%;
+    background-color: #796190;
+    position: fixed;
+    top: 5px;
+    left: 50%; /* Initially centered horizontally */
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition:margin-top 0.8s ease,border-radius 0.7s ease, transform 0.8s ease, width 0.8s ease;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+.navbar img{
+    height: 50px;
+}
+
+.navbar.shrink {
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 100px;
+
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f0a500;
+}
+
+section {
+    padding: 50px 20px;
+    height: 100vh;
+}
+
+section:nth-child(odd) {
+    background-color: #D0F5FF;
+}
+
+section:nth-child(even) {
+    background-color: #ddd;
+}
+.registration-container{
+    display: flex;
+    padding: 0 5%;
+    width: 90%;
+    justify-content:space-between; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+    background-color: #f0f0f0;
+}
+    
+
+.home {
+    display: flex;
+    justify-content: flex-end; /* Aligns items horizontally to the right */
+    align-items: center;      /* Centers items vertically */
+    background-color: #f0f0f0;
+    margin-right: 10%;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 440px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 0 50px rgba(170, 173, 255, 0.759);
+}
+
+.registration-form h2 {
+    margin-top: 0;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.registration-form input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.registration-form br {
+    display: block;
+    content: "";
+    margin-top: 4px; /* Adjust the height as needed */
+  }
+
+.registration-form button {
+    width: 95%;
+    padding: 10px;
+    background-color: #4F6AAE;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+.registration-information{
+    display: grid;
+    grid-auto-columns: auto;
+}
+.info-item{
+    display: inline-grid;
+}
+input{
+    padding:10%;
+}
+.floating-form {
+    position: fixed;
+    left: 60%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    
+    
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#registration-form {
+    transition: left 1.2s ease;
+}
+#login-form {
+    transition: left 1.2s ease;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+
+.social-link {
+    color: white;
+    margin-left: 10px; /* Space between icons */
+    font-size: 20px; /* Icon size */
+    text-decoration: none; /* Remove underline from links */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make icons round */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+}
+.social-bar.shrink {
+    margin-top: 50px;
+    width: 80%;
+    border-radius: 100px;
+
+}

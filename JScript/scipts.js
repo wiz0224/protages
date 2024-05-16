@@ -13,18 +13,6 @@ let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         lastScrollTop = scrollTop;
     });
 
-const socialbar = document.querySelector('.social-bar');
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop && scrollTop > 0) {
-           socialbar.classList.add('shrink');
-        } if(scrollTop == 0) {
-            bar.classList.remove('shrink');
-        }
-            lastScrollTop = scrollTop;
-        });
-
-
 var registrationForm = document.getElementById('registration-form');
 
 function moveFormToLeft() {
@@ -70,3 +58,4 @@ function toggleForm(formToShow) {
         document.getElementById('login-form').style.display = 'block';
     }
 }
+

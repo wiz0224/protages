@@ -85,6 +85,7 @@ section:nth-child(even) {
     align-items: center;     /* Center vertically */
     height: 100vh;           /* Full viewport height */
     background-color: #f0f0f0;
+    overflow: hidden;
 }
     
 
@@ -200,4 +201,98 @@ input{
     width: 80%;
     border-radius: 100px;
 
+}
+html {
+    scroll-behavior: smooth;
+}
+  .animated-section {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    background-color: #ddd; /* Background color for the section */
+    overflow: hidden; /* Ensure the GIF doesn't overflow the section */
+}
+
+.moving-gif {
+    position: absolute;
+    bottom: 0; /* Position the GIF at the bottom */
+    left: -100px; /* Start position (off-screen to the left) */
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    animation: moveGif 5s linear infinite; /* Animation with 5s duration */
+}
+
+@keyframes moveGif {
+    0% {
+        left: -100px; /* Start off-screen */
+    }
+    100% {
+        left: calc(100% + 100px); /* Move off-screen to the right */
+    }
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: 300px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.slider-container {
+    flex: 1;
+    position: relative;
+    max-width: 50%;
+    height: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }

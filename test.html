@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Products</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.main-section {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.product-container {
+    width: 200px; /* Adjust width as needed */
+    border-left: 1px solid #ccc;
+    background-color: #f8f8f8;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.product-list {
+    padding: 10px;
+}
+
+.product {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Optional: Styling for the scrollbar */
+.product-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.product-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <section class="main-section">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slides">
+                    <img src="image1.jpg" alt="Image 1">
+                    <img src="image2.jpg" alt="Image 2">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJ</title>
+    
+    <link rel="icon" href="images/—Pngtree—3d donut vector png_7261511.png" type="image/png">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
+    <script src="ism/js/ism-2.2.min.js"></script>
+</head>
+<body>
+   
+
+    <div id="registration-form" class="floating-form">
+        <form class="registration-form">
+            <h2>Registration</h2>
+            <table class="registration-table">
+            <tr style="text-align: center;">
+                <td colspan="2" >
+                    <label for="registrartion-fullname">Fullname:</label>
+                    <input type="text" id="registrartion-Fullname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label  for="registration-username">Username:</label>
+                    <input type="text" id="registration-username">
+                </td>
+                <td class="info=item">
+                    <label for="registrartion-password">Password:</label>
+                    <input type="password" id="registrartion-password">
+                </td>                
+            </tr>
+            </table>
+            <button type="button">Register</button>
+            <br>
+            <button type="button" onclick="toggleForm('login')">Switch to Login</button>
+        </form>
+    </div>
+    
+    <div id="login-form" style="display: none;" class="floating-form">
+        <form class="registration-form">
+            <!-- Login form fields -->
+            <h2>Login</h2>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password">
+            <button type="button">LogIn</button>
+            <br>
+            <button type="button" onclick="toggleForm('registration')">Switch to Registration</button>
+        </form>
+    </div>
+
+    <section id="login" class="login-section">
+        <div class="image-container">
+        <img src="images/pngwing.com (1).png" alt="" style="width: 600px;">
+        </div>
+        <img src="images/donut-cookierun.gif" alt="Moving GIF" class="moving-gif" >
+    </section>
+    <section id="about" style="background:url(images/imageedit_4_6715884704.jpg);background-repeat: no-repeat;background-size: cover;" class="about-section">
+        <div>
+        <p>Content for the about section...</p>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 1"></div>
+                    <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 2"></div>
+                    <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 3"></div>                
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="JScript/scipts.js"></script>
+    
+</body>
+</html>

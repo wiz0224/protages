@@ -47,6 +47,8 @@ var LoginForm = document.getElementById('login-form');
         }
         });
 
+        
+
 
 
 function toggleForm(formToShow) {
@@ -59,3 +61,23 @@ function toggleForm(formToShow) {
     }
 }
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    let currentIndex = 0;
+    const intervalTime = 3000; // 3000ms = 3 seconds
+
+    function goToNextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlidePosition();
+    }
+
+    function updateSlidePosition() {
+        const slideWidth = slides.children[0].offsetWidth;
+        const newTransformValue = -currentIndex * slideWidth;
+        slides.style.transform = `translateX(${newTransformValue}px)`;
+    }
+
+    setInterval(goToNextSlide, intervalTime);
+});

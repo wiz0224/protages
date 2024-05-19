@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .navbar {
     width: 95%;
-    background-color: #796190;
+    background-color: #874bc0;
     position: fixed;
     top: 5px;
     left: 50%; /* Initially centered horizontally */
@@ -65,32 +66,44 @@ body {
     color: #f0a500;
 }
 
-section {
-    padding: 50px 20px;
-    height: 100vh;
-}
 
 section:nth-child(odd) {
-    background-color: #00c8ff;
+    background-color: #9F88B1;
 }
 
 section:nth-child(even) {
-    background-color: #ff0000;
+    background-color: #FDF7FF;
 }
-.home-section{
+.login-section{
     display: flex;
     padding: 0 5%;
-    width: 90%;
     justify-content:space-between; /* Center horizontally */
     align-items: center;     /* Center vertically */
     height: 100vh;           /* Full viewport height */
     background-color: #f0f0f0;
     overflow: hidden;
+    width: auto;
 }
-.login-section{
+.login-product-section{
+    padding:  50PX;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    height: 100vh; /* Full viewport height to demonstrate vertical centering */
+    text-align: center; /* Center text inside elements */
+    background-color: #f0f0f0;
+    overflow: hidden;
+    width: auto;
+}
+.home {
+    display: flex;
+    justify-content: space-around; /* Aligns items horizontally to the right */
+    align-items: center;      /* Centers items vertically */
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+.home-section{
     display: flex;
     padding: 0 5%;
-    width: 90%;
     justify-content:space-between; /* Center horizontally */
     align-items: center;     /* Center vertically */
     height: 100vh;           /* Full viewport height */
@@ -98,23 +111,25 @@ section:nth-child(even) {
     overflow: hidden;
 }
 .about-section{
-    display: flex;
-    
-    justify-content:space-between; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 100vh;           /* Full viewport height */
+    padding: 0 5%;
+    display: grid;
+    place-items: center; /* Center both horizontally and vertically */
+    height: 105vh;
+    text-align: center; /* Center text inside elements */
     background-color: #f0f0f0;
     overflow: hidden;
-}    
-
-
-.home {
-    display: flex;
-    justify-content: flex-end; /* Aligns items horizontally to the right */
-    align-items: center;      /* Centers items vertically */
-    background-color: #f0f0f0;
-    margin-right: 10%;
 }
+
+.about-section p{
+    font-size: xx-large;
+    margin: 0;
+}    
+.about-section img{
+    margin-top: 100px;
+}
+
+
+
 
 .registration-form {
     display: flex;
@@ -196,7 +211,6 @@ input{
 
 .social-link {
     color: white;
-    margin-left: 10px; /* Space between icons */
     font-size: 20px; /* Icon size */
     text-decoration: none; /* Remove underline from links */
     display: flex;
@@ -206,10 +220,14 @@ input{
     height: 40px;
     border-radius: 50%; /* Make icons round */
     transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: all 0.9s ease;
 }
 
 .social-link:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+    width: 50px;
+    height: 50px;
+    color: #ffd479;
 }
 .social-bar.shrink {
     margin-top: 50px;
@@ -249,6 +267,8 @@ html {
 
 
 .slider {
+    display: grid;
+    place-items: center;
     width: 80%;
     max-width: 800px;
     overflow: hidden;

@@ -3,41 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
+    <title>Receipt</title>
     <link rel="stylesheet" href="CSS/test.css">
 </head>
 <body>
-    <div class="slider">
-        <div class="slides">
-            <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 1"></div>
-            <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 2"></div>
-            <div class="slide"><img src="images/pngwing.com (1).png" alt="Image 3"></div>
-            <!-- Add more slides as needed -->
-        </div>
+    <div class="receipt">
+        <header class="receipt-header">
+            <h1>Store Name</h1>
+            <p>1234 Street Address, City, State, 12345</p>
+            <p>(123) 456-7890</p>
+        </header>
+        <section class="receipt-info">
+            <p><strong>Date:</strong> May 21, 2024</p>
+            <p><strong>Receipt #:</strong> 001234</p>
+        </section>
+        <table class="receipt-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1</td>
+                    <td>2</td>
+                    <td>$10.00</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td>1</td>
+                    <td>$15.00</td>
+                    <td>$15.00</td>
+                </tr>
+                <tr>
+                    <td>Item 3</td>
+                    <td>3</td>
+                    <td>$7.50</td>
+                    <td>$22.50</td>
+                </tr>
+            </tbody>
+        </table>
+        <section class="receipt-totals">
+            <p><strong>Subtotal:</strong> $57.50</p>
+            <p><strong>Tax (10%):</strong> $5.75</p>
+            <p><strong>Total:</strong> $63.25</p>
+        </section>
+        <footer class="receipt-footer">
+            <p>Thank you for your purchase!</p>
+            <p>Visit us at www.storename.com</p>
+        </footer>
     </div>
-    <script>
-        // script.js
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const slides = document.querySelector('.slides');
-    const slideCount = document.querySelectorAll('.slide').length;
-    let currentIndex = 0;
-    const intervalTime = 3000; // 3000ms = 3 seconds
-
-    function goToNextSlide() {
-        currentIndex = (currentIndex + 1) % slideCount;
-        updateSlidePosition();
-    }
-
-    function updateSlidePosition() {
-        const slideWidth = slides.children[0].offsetWidth;
-        const newTransformValue = -currentIndex * slideWidth;
-        slides.style.transform = `translateX(${newTransformValue}px)`;
-    }
-
-    setInterval(goToNextSlide, intervalTime);
-});
-
-    </script>
+    <button class="back-home-btn" onclick="window.location.href='index.html'">Back to Home</button>
 </body>
 </html>

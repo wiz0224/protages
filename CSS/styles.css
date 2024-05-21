@@ -238,13 +238,7 @@ input{
 html {
     scroll-behavior: smooth;
 }
-  .animated-section {
-    position: relative;
-    width: 100%;
-    height: 150px; /* Adjust the height as needed */
-    background-color: #ddd; /* Background color for the section */
-    overflow: hidden; /* Ensure the GIF doesn't overflow the section */
-}
+
 
 .moving-gif {
     position: absolute;

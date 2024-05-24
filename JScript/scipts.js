@@ -81,3 +81,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     setInterval(goToNextSlide, intervalTime);
 });
+
+
+$('.buy').click(function(){
+    $('.bottom').addClass("clicked");
+  });
+  
+  $('.remove').click(function(){
+    $('.bottom').removeClass("clicked");
+  });
